@@ -1,6 +1,6 @@
 ---
 title: Azure Active Directory authentication and synchronization protocol overview
-description: Architectural guidance on integrating Azure AD with legacy authentication protocols and sync patterns
+description: Architectural guidance on integrating Azure AD with Modern authentication protocols and sync patterns
 services: active-directory
 author: janicericketts
 manager: martinco
@@ -18,11 +18,11 @@ ms.collection: M365-identity-device-management
 
 # Azure Active Directory integrations with authentication protocols
 
-Microsoft Azure Active Directory (Azure AD) enables integration with many authentication protocols. The authentication integrations enable you to use Azure AD and its security and management features with little or no changes to your applications that use legacy authentication methods.
+Microsoft Azure Active Directory (Azure AD) enables integration with many authentication protocols. The authentication integrations enable you to use Azure AD and its security and management features with little or no changes to your applications that use modern authentication methods.
 
-## Legacy authentication protocols
+## Modern authentication protocols
 
-The following table presents authentication Azure AD integration with legacy authentication protocols and their capabilities. Select the name of an authentication protocol to see
+The following table presents authentication Azure AD integration with modern authentication protocols and their capabilities. Select the name of an authentication protocol to see
 
 * A detailed description
 
@@ -50,6 +50,11 @@ The following table presents authentication Azure AD integration with legacy aut
 | [Windows Authentication - Kerberos Constrained Delegation](auth-kcd.md)| ![check mark](./media/authentication-patterns/check.png)| ![check mark](./media/authentication-patterns/check.png)| ![check mark](./media/authentication-patterns/check.png)| ![check mark](./media/authentication-patterns/check.png) |
 
 
+## Legacy authentication protocols
+Avoid using legacy authentication protocols! 
+This is because legacy authentication protocols can’t enforce MFA, and other advanced security features available in Azure AD, making them preferred entry points for adversaries attacking your organization. 
 
+[A list of legacy authentication protocols can be found here:](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/block-legacy-authentication#messaging-protocols-that-support-legacy-authentication)
 
+[Security assessment: Legacy protocols usage](https://learn.microsoft.com/en-us/defender-for-identity/security-assessment-legacy-protocols)
 
